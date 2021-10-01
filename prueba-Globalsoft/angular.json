@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "prueba-Globalsoft": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "prueba-Globalsoft"
+    }
+  },
+  "defaultProject": "prueba-Globalsoft",
+  "cli": {
+    "analytics": "e6c05576-dc0d-453c-8e0c-c84ba117a774"
+  }
 }
