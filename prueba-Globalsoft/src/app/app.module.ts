@@ -7,10 +7,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+import { GaleriaComponent } from './galeria/galeria.component';
+import { CrudComponent } from './crud/crud.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GaleriaComponent,
+    CrudComponent,
+    FormularioComponent,
+    MapaComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
