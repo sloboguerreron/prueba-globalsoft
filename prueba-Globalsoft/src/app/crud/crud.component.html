@@ -1,1 +1,33 @@
-<p>crud works!</p>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;" id="shop_head">
+    <a class="navbar-brand" href="index.php">CRUD-DEMO</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.php">首頁 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能表
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="index.php?op=new_product">新增產品</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item disabled" href="#">其他功能</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="index.php" method="GET" role="form">
+        <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="請輸入關鍵字" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋</button>
+      </form>
+    </div>
+  </nav>
+
+  <br/>
+  <div id="shop_main" class="row">
+    <div class="col-md-9 col-sm-8">
+      <!-- Flow Control -->
+
+    </div>
+  </div>
+</div>

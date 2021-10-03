@@ -7,8 +7,15 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/Galeria']">Galeria Fotos</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/Crud']">CRUD</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Agregar</a></li>
+            <li><a class="dropdown-item" href="#">Nuevo</a></li>
+            <li><a class="dropdown-item" href="#">Quitar</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/Formulario']">Formulario de Contacto</a>
