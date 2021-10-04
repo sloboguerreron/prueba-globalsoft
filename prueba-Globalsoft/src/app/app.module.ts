@@ -16,10 +16,13 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { ChatComponent } from './chat/chat.component';
 
-//firebase
+//Firebase
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+
+//Mapa
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { environment } from 'src/environments/environment';
     MatSliderModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     MatIconModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC9DYQCFyYmJshk2aym1I7sbS9ozc3GJMw'
+    })
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

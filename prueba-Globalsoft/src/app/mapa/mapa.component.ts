@@ -7,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapaComponent implements OnInit {
 
+  title = 'Mapa Bogota';
+  lat = 4.644987;
+  lng = -74.075389;
   constructor() { }
-
-  center = {lat: 24, lng: 12};
-  zoom = 15;
-  //display?: google.maps.LatLngLiteral;
 
   ngOnInit(): void {
   }
