@@ -1,16 +1,12 @@
-import { async } from '@angular/core/testing';
-import { AngularFireModule } from '@angular/fire';
 import { Injectable } from "@angular/core";
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { resolve } from 'dns';
-import { rejects } from 'assert';
 
 export interface Formulario {
   id: string,
   email: string,
   nombre: string,
-  numeroCel: number,
+  numeroCel: string,
   mensaje?: string
 }
 

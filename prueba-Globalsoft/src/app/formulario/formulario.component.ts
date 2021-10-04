@@ -1,25 +1,28 @@
+import { async } from '@angular/core/testing';
+import { FormularioService } from './../services/formulario.services';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.scss']
+  styleUrls: ['./formulario.component.scss'],
+  providers: [FormularioService]
 })
 export class FormularioComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private formSvc: FormularioService) { }
 
   ngOnInit(): void {
     this.initForm();
   }
 
-  onSave(): void {
+ async onSave(): Promise<void> {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-
+      const formValue = this.contactForm.value;
+      await this.formSvc.onSaveContact(formValue);
     } else {
       console.log("no es valido");
 
