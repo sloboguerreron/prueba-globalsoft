@@ -69,8 +69,11 @@ export class CrudComponent implements OnInit {
   }
 
   onDeleteTarea(id: string): void {
-
+    const confirmacion = confirm('Esta seguro de eliminar la tarea');
+    if (confirmacion) {
       this.formSvc.deleteTarea(id);
+    }
+
 
   }
 
