@@ -7,14 +7,23 @@
       <div class="form-group">
         <label>Correo contacto</label>
         <input type="text" class="form-control" id="email" placeholder="correo@example.com" formControlName="email" [ngClass]="isValidField('email')">
+        <div class="invalid-feedback">
+          <samp *ngIf="contactForm.get('email').errors?.required">El correo debe @</samp>
+        </div>
       </div>
       <div class="form-group">
         <label>Nombre de contacto</label>
         <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" formControlName="nombre" [ngClass]="isValidField('nombre')">
+        <div class="invalid-feedback">
+          <samp *ngIf="contactForm.get('nombre').errors?.required">Debe escribir un Nombre</samp>
+        </div>
       </div>
       <div class="form-group">
         <label>Numero de contacto</label>
         <input type="text" class="form-control" id="numeroCel" placeholder="3128040530" formControlName="numeroCel" [ngClass]="isValidField('numeroCel')">
+        <div class="invalid-feedback">
+          <samp *ngIf="contactForm.get('numeroCel').errors?.required">el numero debe ser 10 digitos</samp>
+        </div>
       </div>
       <div class="form-group">
         <label>Mensaje</label>
