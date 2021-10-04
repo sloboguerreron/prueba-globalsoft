@@ -10,6 +10,7 @@ export class MapaComponent implements OnInit {
   title = 'Mapa Bogota';
   lat = 4.644987;
   lng = -74.075389;
+  zoom = 14;
   constructor() { }
 
   ngOnInit(): void {

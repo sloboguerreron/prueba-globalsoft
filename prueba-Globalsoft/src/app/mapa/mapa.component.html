@@ -1,10 +1,13 @@
-<div class="card">
+0<div class="card">
   <div class="card-header">
     Mapa
   </div>
   <div class="card-body">
-    <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
       <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      <agm-marker [latitude]="4.634114" [longitude]="-74.082593" ></agm-marker>
+      <agm-marker [latitude]="4.691530" [longitude]="-74.134903"></agm-marker>
     </agm-map>
   </div>
 </div>
+
