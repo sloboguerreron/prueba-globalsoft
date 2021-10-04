@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "globalsoft-test": {
+      "hosting": {
+        "prueba-Globalsoft": [
+          "globalsoft-test"
+        ]
+      }
+    }
+  }
+}

@@ -121,6 +121,10 @@
               "devServerTarget": "prueba-Globalsoft:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

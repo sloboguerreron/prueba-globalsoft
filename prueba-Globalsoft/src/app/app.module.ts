@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,11 +8,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+
+//componentes
 import { GaleriaComponent } from './galeria/galeria.component';
 import { CrudComponent } from './crud/crud.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { ChatComponent } from './chat/chat.component';
+
+//firebase
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,9 +37,10 @@ import { ChatComponent } from './chat/chat.component';
     ReactiveFormsModule,
     MatToolbarModule,
     MatSliderModule,
-    MatIconModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatIconModule,
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
