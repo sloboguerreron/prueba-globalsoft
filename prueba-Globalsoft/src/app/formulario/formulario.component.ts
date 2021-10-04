@@ -2,6 +2,7 @@ import { async } from '@angular/core/testing';
 import { FormularioService } from './../services/formulario.services';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario',
@@ -23,6 +24,12 @@ export class FormularioComponent implements OnInit {
     if (this.contactForm.valid) {
       const formValue = this.contactForm.value;
       await this.formSvc.onSaveContact(formValue);
+
+      Swal.fire(
+        'Formulario enviado!',
+        'Revisa la base de Datos!',
+        'success'
+      )
     } else {
       console.log("no es valido");
 
