@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 export interface Crud {
@@ -16,10 +16,10 @@ export class CrudService {
 
   actividades: Observable<any>;
   private actividadesCollection: AngularFirestoreCollection<any>
-
+  private actividadDoc: AngularFirestoreDocument<Crud>;
 
   constructor(private readonly afs: AngularFirestore) {
-    this.actividadesCollection = afs.collection<any>('tareas')
+    this.actividadesCollection = afs.collection<any>('tareas');
   }
 
   async onSaveContact (crudForm: any):Promise<void> {
@@ -33,6 +33,10 @@ export class CrudService {
         rejects(error.message);
       }
     })
+  }
 
+  deleteTarea(id: string): void {
+    this.actividadDoc = this.afs.doc<Crud>(`tareas/${id}`);
+    this.actividadDoc.delete();
   }
 }
