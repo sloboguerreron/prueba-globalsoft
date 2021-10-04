@@ -10,22 +10,29 @@ export class FormularioComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.initForm();
   }
 
-  onSave(): void{
-    if(this.contactForm.valid){
+  onSave(): void {
+    if (this.contactForm.valid) {
       console.log(this.contactForm.value);
 
-    }else{
+    } else {
       console.log("no es valido");
 
     }
   }
-  private initForm(): void{
+
+  isValidField(field: string): string {
+    const validateField = this.contactForm.get(field);
+    return (!validateField.valid && validateField.touched)
+      ? "is-invalid" : validateField.touched ? "is-valid" : "";
+  }
+
+  private initForm(): void {
     this.contactForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       nombre: ['', [Validators.required]],
