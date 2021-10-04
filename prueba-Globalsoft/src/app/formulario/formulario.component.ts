@@ -1,4 +1,3 @@
-import { async } from '@angular/core/testing';
 import { FormularioService } from './../services/formulario.services';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
